@@ -1,5 +1,8 @@
 Reminders
 ========
+
+Demo : https://polymer-reminder.firebaseapp.com/reminders
+
 "Extend Polymer Start Kit with a reminders section. It should have a list of reminders which user has entered as well as a way for users to add new reminders. The user should be able to enter a title for the reminder, more detailed description of the reminder as well as the due date . The user has to be able to save the reminder."
 
 Solutions
@@ -37,7 +40,7 @@ Implement reminder's features by import different element components, binding th
  - ```<vaadin-date-picker>``` - due date selector
  - ```<vaadin-grid>``` - display exit reminders
 
-#####*Vaadin elements has some good UI components supports polymer, in this app ```<vaddin-date-picker>``` and `<vaadin-grid>` were chose to implement due date and reminders features. vaddin-grid instruction:  https://vaadin.com/elements/-/element/vaadin-grid*
+######Vaadin elements has some good UI components supports polymer, in this app ```<vaddin-date-picker>``` and `<vaadin-grid>` were chose to implement due date and reminders features. vaddin-grid instruction:  https://vaadin.com/elements/-/element/vaadin-grid
 
  - `<iron-localstorage>`  -  data saving.
 
@@ -142,7 +145,7 @@ Polymer({
 
 ##Tests
 
-Polymer Starter Kit included Web Component Tester for unit testing, simply use ```wct``` tool will run tests in all the browsers that have installed. 
+Polymer Starter Kit included Web Component Tester for unit testing, simply use ```wct``` tool will run tests in all the browsers that have installed.
 
 Install globally
 ```npm install -g web-component-tester```
