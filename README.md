@@ -26,19 +26,18 @@ Compile reminder's features into a new component ```<my-reminder>``` and add it 
 
  > - Set up navigation to reminders section at routing.html
 
- within ```<my-reminder>```
- User inputs => save to an object ```reminder:{ titel:"", details:"", due:""}``` => push objects into an array ```[reminder1, reminder2, reminder3, ..]``` =>  display the array in grid (reminders list)
-
-
 ----------
 
 ###Building  ```<my-reminder>```
+>-  create app/elements/my-reminders/my-reminder.html
+
 Implement reminder's features by import different elements, binding their value to the declared properties and methods.
 
 
->-  create app/elements/my-reminders/my-reminder.html
+User inputs => save to an object ```reminder:{ titel:"", details:"", due:""}``` => push objects into an array ```[reminder1, reminder2, reminder3, ..]``` =>  display the array in grid (reminders list)
 
- ```<my-reminder>```  imports following elements for its interface,
+
+ imports following elements for interface,
 
  - ```<paper-input>```  -  input title and detail input field.
  -  ```<paper-button>```-  reminder submit.
