@@ -143,7 +143,7 @@ Polymer({
 
 
 
-##Tests
+#Tests
 
 Polymer Starter Kit included Web Component Tester for unit testing, simply use ```wct``` tool will run tests in all the browsers that have installed.
 
