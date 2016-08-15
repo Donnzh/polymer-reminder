@@ -106,7 +106,8 @@ Using the properties of element `<vaadin-grid>` to list all the objects within r
 ```
 
 save the reminders data by using `<iron-localstorage>` :
- `<iron-localstorage value="{{reminders}}" on-iron-localstorage-load-empty="initializeDefaultReminder"></iron-localstorage>`  
+
+ ```<iron-localstorage value="{{reminders}}" on-iron-localstorage-load-empty="initializeDefaultReminder"></iron-localstorage>```  
 
  initialises default if nothing has been stored
 ```
