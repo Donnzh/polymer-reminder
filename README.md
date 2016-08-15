@@ -32,12 +32,13 @@ Compile reminder's features into a new component ```<my-reminder>``` and add it 
 Implement reminder's features by import different elements, binding their value to the declared properties and methods.
 
 Solution:
+
 User inputs => save to an object ```reminder:{ titel:"", details:"", due:""}``` => push objects into an array ```[reminder1, reminder2, reminder3, ..]``` =>  display the array in grid (reminders list)
 
 
-Details steps:
+Methods:
 
->-  touch app/elements/my-reminders/my-reminder.html
+>-  create app/elements/my-reminders/my-reminder.html
 
  ```<my-reminder>```  imports following elements for its interface,
 
@@ -75,7 +76,7 @@ properties:{
 
 
 ```
-The reminder object should have three properties:
+The reminder object will have three properties:
 `{title:"", details:"", due:""}`
 
 
