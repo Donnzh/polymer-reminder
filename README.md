@@ -15,7 +15,7 @@ Solutions
 
 ###Methods:
 
-Compile reminder's features and functions into an new component ```<my-reminder>``` and add it into the main content of the index.html, so the app will render reminders section when it called.
+Compile reminder's features into a new component ```<my-reminder>``` and add it to the main content of the index.html, the app will render reminders section when it called.
 
 > Adding reminder section to content:
 
@@ -28,8 +28,8 @@ Compile reminder's features and functions into an new component ```<my-reminder>
 
 ----------
 
-####Building  ```<my-reminder>```
-Implement reminder's features by import different element components, binding their value to declared properties and methods.
+###Building  ```<my-reminder>```
+Implement reminder's features by import different elements, binding their value to the declared properties and methods.
 
 >-  touch app/elements/my-reminders/my-reminder.html
 
@@ -140,7 +140,14 @@ Polymer({
 
 ```
 
-
+```flow
+st=>start: User inputs
+op1=>start: save to an object:{ titel:"", details:"", due:""}
+op=>start: push reminder objects into an array [reminder1, reminder2, reminder3, ..]
+op3=>start: showing that array in grid <vaadin-grid> (reminder list)
+e=>end
+st->op1->op->op3
+```
 
 
 #Tests
