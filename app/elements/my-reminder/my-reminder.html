@@ -1,0 +1,123 @@
+<!-- create the reminder element that render at index.html  -->
+
+<!--import elements -->
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-styles/typography.html">
+
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/vaadin-grid/vaadin-grid.html">
+<link rel="import" href="../../bower_components/vaadin-date-picker/vaadin-date-picker.html">
+<link rel="import" href="../../bower_components/iron-localstorage/iron-localstorage.html">
+
+
+<dom-module id="my-reminder">
+
+
+  <style>
+    /* css for reminder element*/
+  form{
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  form .reminder-title{
+    flex: 0 1 30%;
+  }
+
+  form .date-picker{
+    flex: 0 1 30%;
+    margin-left: auto;
+  }
+
+  form .reminder-details{
+     flex: 100%;
+  }
+
+  form .submit-button{
+     flex: 1 60%;
+     margin:20px 10px 20px 0;
+     background: var(--paper-pink-400);
+     color: white !important;
+  }
+
+  form .empty-button {
+    flex: 1 24%;
+    margin:20px 0 20px 10px;
+    background: var(--paper-green-400);
+    color: white !important;
+  }
+
+  </style>
+
+  <template>
+    <!-- new reminder input form -->
+    <form is="iron-form" >
+      <paper-input class = "reminder-title" id="reminder_title" label="Title" value="{{reminder.title}}"></paper-input>
+      <vaadin-date-picker class="date-picker" id="reminder_date" label="Due" value="{{reminder.duedate}}"></vaadin-date-picker>
+      <paper-input class="reminder-details" id="reminder_details" label="Details" value="{{reminder.details}}"></paper-input>
+
+      <paper-button class="submit-button" raised on-tap="_addReminder">Add to Reminders</paper-button>
+      <paper-button class="empty-button" id="empty_button" raised on-tap="_cleanReminder">reset</paper-button>
+
+    </form>
+    <!-- reminders table  itmes = data array -->
+    <vaadin-grid items="{{reminders}}">
+      <table>
+       <!-- Define the columns and their mapping to data properties. -->
+       <col name="title" id="col_title">
+       <col name="details" id="col_details">
+       <col name="duedate" id="col_duedate">
+
+       <!-- Define the column headings. -->
+       <thead>
+         <tr>
+           <th>Title</th>
+           <th>Details</th>
+           <th>Due</th>
+         </tr>
+       </thead>
+     </table>
+
+    </vaadin-grid>
+    <iron-localstorage name="my-reminder-storage" id="localstorage"
+      value="{{reminders}}"
+      on-iron-localstorage-load-empty="initializeDefaultReminder"
+    ></iron-localstorage>
+  </template>
+</dom-module>
+
+<script>
+(function() {
+  'use strict';
+
+  Polymer({
+    is: "my-reminder",
+    properties: {
+      //reminder object
+      reminder: {
+        type: Object,
+        value: {}
+      },
+      //create an array for save reminder data
+      reminders: {
+        type: Array,
+        value: []
+      }
+    },
+    _addReminder: function() {
+      //push to the reminders array
+      this.push('reminders', this.reminder);
+      // empty the form
+      this.reminder = {};
+      // console.log(this.reminders)
+    },
+    _cleanReminder: function() {
+      this.reminders=[];
+    },
+    initializeDefaultReminder: function(){
+      this.reminders = [];
+    },
+  });
+})();
+</script>

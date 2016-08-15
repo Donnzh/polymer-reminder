@@ -17,6 +17,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Polymer Starter Kit">
   <title>Polymer Starter Kit</title>
+  <base href="/">
 
   <!-- Place favicon.ico in the `app/` directory -->
 
@@ -91,6 +92,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <iron-icon icon="mail"></iron-icon>
             <span>Contact</span>
           </a>
+
+          <!-- Adding Reminders to Drawer Content -->
+          <a data-route="reminders" href="{{baseUrl}}reminders">
+            <iron-icon icon="assignment"></iron-icon>
+            <span>Reminders</span>
+          </a>
+
         </paper-menu>
       </paper-scroll-header-panel>
 
@@ -178,6 +186,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <p>This is the contact section</p>
               </paper-material>
             </section>
+                <!-- adding reminders to Main Content -->
+            <section data-route="reminders" tabindex="-1" >
+              <paper-material elevation="1">
+
+                <h1 class="page-title" tabindex="-1">Reminders</h1>
+
+                <my-reminder></my-reminder>
+              </paper-material>
+            </section>
+
           </iron-pages>
         </div>
       </paper-scroll-header-panel>

@@ -1,0 +1,96 @@
+
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>my-reminder-basic</title>
+
+  <script src="../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+  <script src="../bower_components/web-component-tester/browser.js"></script>
+
+  <!-- Import the my-reminder element to test -->
+  <link rel="import" href="../elements/my-reminder/my-reminder.html">
+
+</head>
+<body>
+
+  <test-fixture id="basic">
+    <template>
+       <my-reminder></my-reminder>
+    </template>
+  </test-fixture>
+
+  <script>
+    suite('<my-reminder>', function() {
+      var myEl;
+
+      setup(function() {
+        myEl = fixture('basic');
+      });
+
+      test('Default Value of reminder{} should be an empty object and reminders[] shoud be an empty array', function() {
+
+          expect(myEl.reminder).to.be.an('object');
+          expect(myEl.reminder).to.eql({});
+          expect(myEl.reminders).to.be.an('array');
+          expect(myEl.reminders).to.eql([]);
+
+        });
+
+        test('Users inputs should binded correctly with declared properties and passed to the reminder{}',function(){
+
+          var title = myEl.$$('#reminder_title');
+          var details = myEl.$$('#reminder_details');
+          var duedate = myEl.$$('#reminder_date');
+
+          title.value ='test title'
+          details.value ='test details'
+          duedate.value = '2016-08-15'
+
+          expect(title.value).to.eql(myEl.reminder.title);
+          expect(details.value).to.eql(myEl.reminder.details);
+          expect(duedate.value).to.eql(myEl.reminder.duedate);
+          //testing myEl.reminder equal to the inputs value above
+          var expected = {title:'test title', details:'test details', duedate:'2016-08-15'}
+          expect(myEl.reminder).to.eql(expected)
+
+        });
+
+        test('When add reminder button click, _addReminder() should called and push reminder{} into reminders[] correctly, and then empty the reminder{}', function(){
+          myEl.reminder = {};
+          myEl.reminder = {title:"title_input", detail:"detials_input111", due:"date"}
+          myEl.reminders = [];
+          myEl._addReminder()
+          var expected = [{title:"title_input", detail:"detials_input111", due:"date"}]
+
+          expect(myEl.reminders).to.eql(expected)
+          expect(myEl.reminder).to.eql({})
+
+        });
+
+        test('the reminders list should display reminder correctly', function() {
+          var g = myEl.$$('vaadin-grid')
+          expect(g.items).to.eql(myEl.reminders)
+        });
+
+
+        test('save the data correctly by using <iron-localstorage> element', function(){
+          var s = myEl.$$('iron-localstorage')
+          expect(myEl.reminders).to.eql(s.value)
+          myEl.initializeDefaultReminder()
+          expect(myEl.reminders).to.eql([])
+        });
+
+        test('empty-button should call _cleanReminder() then deleted all the reminders', function(){
+          var e = myEl.$$('#empty_button')
+          e.click()
+          expect(myEl.reminders).to.eql([])
+        });
+
+
+      });
+
+  </script>
+
+</body>
+</html>
