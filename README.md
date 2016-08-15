@@ -106,7 +106,8 @@ Using the properties of element `<vaadin-grid>` to list all the objects within r
 ```
 
 save the reminders data by using `<iron-localstorage>` :
- `<iron-localstorage value="{{reminders}}" on-iron-localstorage-load-empty="initializeDefaultReminder"></iron-localstorage>`  
+
+ ```<iron-localstorage value="{{reminders}}" on-iron-localstorage-load-empty="initializeDefaultReminder"></iron-localstorage>```  
 
  initialises default if nothing has been stored
 ```
@@ -120,7 +121,7 @@ Polymer({
 ```
 
 
-Empty the reminder list by empty the reminders array.
+Clean the reminder list by empty the reminders array.
 
 ```
 <paper-button class="empty-button" on-tap="_cleanReminder">Clean Reminders</paper-button>
@@ -137,21 +138,11 @@ Polymer({
 ```
 
 
-```flow
-st=>start: User inputs
-op1=>start: save to an object:{ titel:"", details:"", due:""}
-op=>start: push reminder objects into an array [reminder1, reminder2, reminder3, ..]
-op3=>start: showing that array in grid <vaadin-grid> (reminder list)
-e=>end
-st->op1->op->op3
-```
-
-
 
 
 ##Tests
 
-Polymer Starter Kit included Web Component Tester for unit testing, simply use ```wct``` tool will run tests in all the browsers that have installed.
+Polymer Starter Kit included Web Component Tester for unit testing, simply use ```wct``` tool will run tests in all the browsers that have installed. 
 
 Install globally
 ```npm install -g web-component-tester```
