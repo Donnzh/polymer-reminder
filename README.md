@@ -121,7 +121,7 @@ Polymer({
 ```
 
 
-Empty the reminder list by empty the reminders array. 
+Clean the reminder list by empty the reminders array. 
 
 ```
 <paper-button class="empty-button" on-tap="_cleanReminder">Clean Reminders</paper-button>
@@ -135,16 +135,6 @@ Polymer({
 })
 </script>
 
-```
-
-
-```flow
-st=>start: User inputs
-op1=>start: save to an object:{ titel:"", details:"", due:""}
-op=>start: push reminder objects into an array [reminder1, reminder2, reminder3, ..] 
-op3=>start: showing that array in grid <vaadin-grid> (reminder list)
-e=>end
-st->op1->op->op3
 ```
 
 
