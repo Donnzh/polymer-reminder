@@ -26,18 +26,19 @@ Compile reminder's features into a new component ```<my-reminder>``` and add it 
 
  > - Set up navigation to reminders section at routing.html
 
+
 ----------
 
 ###Building  ```<my-reminder>```
 >-  create app/elements/my-reminders/my-reminder.html
 
-Implement reminder's features by import different elements, binding their value to the declared properties and methods.
 
+Implement reminder's features by import different elements, binding their value to the declared properties and methods.
 
 User inputs => save to an object ```reminder:{ titel:"", details:"", due:""}``` => push objects into an array ```[reminder1, reminder2, reminder3, ..]``` =>  display the array in grid (reminders list)
 
 
- imports following elements for interface,
+Imports following elements for interface,
 
  - ```<paper-input>```  -  input title and detail input field.
  -  ```<paper-button>```-  reminder submit.
@@ -78,7 +79,7 @@ The reminder object will have three properties:
 
 
 
- Push the reminder object into reminders (array) when user click button.
+Push the reminder object into reminders (array) when user click button.
 
 ```
 <paper-button class="submit-button" on-tap="_addReminder">
@@ -96,7 +97,7 @@ Polymer({
     })
 ```
 
-the `console.log(this.reminders)`  within Polymer() should shows :
+The `console.log(this.reminders)`  within Polymer() should shows :
 `[reminder,reminder,reminder,...]`
 
 Using the properties of element `<vaadin-grid>` to list all the objects within reminders in grid form.
@@ -112,7 +113,7 @@ Using the properties of element `<vaadin-grid>` to list all the objects within r
        </vaadin-grid>
 ```
 
-save the reminders data by using `<iron-localstorage>` :
+Save the reminders data by `<iron-localstorage>` :
 
  ```<iron-localstorage value="{{reminders}}" on-iron-localstorage-load-empty="initializeDefaultReminder"></iron-localstorage>```  
 
