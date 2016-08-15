@@ -26,7 +26,7 @@ Compile reminder's features into a new component ```<my-reminder>``` and add it 
 
  > - Set up navigation to reminders section at routing.html
 
- within ```<my-reminder>```
+ #####within ```<my-reminder>```
  User inputs => save to an object ```reminder:{ titel:"", details:"", due:""}``` => push objects into an array ```[reminder1, reminder2, reminder3, ..]``` =>  display the array in grid (reminders list)
 
 
