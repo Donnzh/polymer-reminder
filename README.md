@@ -38,6 +38,7 @@ Implement reminder's features by import different elements, binding their value 
 User inputs => save to an object ```reminder:{ titel:"", details:"", due:""}``` => push objects into an array ```[reminder1, reminder2, reminder3, ..]``` =>  display the array in grid (reminders list)
 
 
+#####Details:
 Imports following elements for interface,
 
  - ```<paper-input>```  -  input title and detail input field.
