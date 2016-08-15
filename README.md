@@ -31,6 +31,10 @@ Compile reminder's features into a new component ```<my-reminder>``` and add it 
 ###Building  ```<my-reminder>```
 Implement reminder's features by import different elements, binding their value to the declared properties and methods.
 
+
+User inputs => save to an object ```reminder:{ titel:"", details:"", due:""}``` => push objects into an array ```[reminder1, reminder2, reminder3, ..]``` =>  display the array in grid (reminders list)
+
+
 >-  touch app/elements/my-reminders/my-reminder.html
 
  ```<my-reminder>```  imports following elements for its interface,
@@ -140,14 +144,6 @@ Polymer({
 
 ```
 
-```flow
-st=>start: User inputs
-op1=>start: save to an object:{ titel:"", details:"", due:""}
-op=>start: push reminder objects into an array [reminder1, reminder2, reminder3, ..]
-op3=>start: showing that array in grid <vaadin-grid> (reminder list)
-e=>end
-st->op1->op->op3
-```
 
 
 #Tests
