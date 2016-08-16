@@ -126,7 +126,7 @@ Save the reminders data by `<iron-localstorage>` :
 
  Initialises default value of reminders if nothing has been stored
 
- 
+
 ```
 Polymer({
 ...
@@ -138,7 +138,7 @@ Polymer({
 ```
 
 
-Clean the reminder list by empty the reminders array.
+When click the RESET button, It will clean the reminder list by empty the reminders array.
 
 ```
 <paper-button class="empty-button" on-tap="_cleanReminder">Clean Reminders</paper-button>
