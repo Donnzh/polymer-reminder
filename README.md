@@ -148,29 +148,31 @@ Polymer({
 
 ----------
 
-#Tests
+#Getting started
 
 Run the project in the local serve  
 
 With Node.js installed
 
 1) Install gulp and bower globally.
+
 ```npm install -g gulp bower```
 
 2) Install the projects local npm and bower dependencies at root directory of this project download
 
 ```npm install && bower install```
 
-3) serve/watch
+3) start serve/watch
 
 ```gulp serve```
 
 
-Test:
+#Tests:
 
 Polymer Starter Kit included Web Component Tester for unit testing, simply use ```wct``` tool will run tests in all the browsers that have installed.
 
 Install globally
+
 ```npm install -g web-component-tester```
 
 run it with
