@@ -52,11 +52,14 @@ Imports following elements for interface,
 
 
 
-Binding the user input's value to the properties of an object called reminder:
+Binding the user input's value to the reminder object:
 
 > Title:`<paper-input value="{{reminder.title}}">`
+
 > Details:`<paper-input value="{{reminder.details}}">`
+
 > Due : `<paper-input value="{{reminder.due}}">`
+
 
 Declare the reminder object and an array called reminders in Polymer( )
 ```  
