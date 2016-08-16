@@ -185,9 +185,9 @@ Alternatively we can run the test through Polymer CLI also powered by Web Compon
  polymer test
 ```
 
-Both of them will run any tests under ```test/``` .
+Both of them will run any tests under ```app/test/``` .
 
-*Note: WCT will run your tests against whatever browsers you have locally installed, for Safari you must manually install the SafariDriver browser extension. You can download and check it out at:*
+#####*Note: WCT will run your tests against whatever browsers you have locally installed, for Safari you must manually install the SafariDriver browser extension. You can download and check it out at:*
 
 https://github.com/SeleniumHQ/selenium/wiki/SafariDriver#getting-started
 
