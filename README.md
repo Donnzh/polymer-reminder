@@ -61,7 +61,8 @@ Binding the user input's value to the reminder object:
 > Due : `<paper-input value="{{reminder.due}}">`
 
 
-Declare the reminder object and an array called reminders in Polymer( )
+Declare the reminder object and reminders array in Polymer()
+
 ```  
 Polymer({
 is:"my-reminder",
@@ -78,6 +79,7 @@ properties:{
 
 
 ```
+
 The reminder object will have three properties:
 `{title:"", details:"", due:""}`
 
@@ -101,7 +103,7 @@ Polymer({
     })
 ```
 
-The `console.log(this.reminders)`  within Polymer() should shows :
+The `console.log(this.reminders)`  will outputs :
 `[reminder,reminder,reminder,...]`
 
 Using the properties of element `<vaadin-grid>` to list all the objects within reminders in grid form.
