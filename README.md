@@ -53,7 +53,7 @@ https://github.com/SeleniumHQ/selenium/wiki/SafariDriver#getting-started
 
 
 
-Developing Solution logs
+Detail Developing Solutions
 -------------
 > **Task Analyse:**
 
