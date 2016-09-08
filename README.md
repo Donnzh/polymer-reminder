@@ -3,7 +3,7 @@ Reminders
 
 Demo : https://polymer-reminder.firebaseapp.com/reminders
 
-"Extend Polymer Start Kit with a reminders section. It should have a list of reminders which user has entered as well as a way for users to add new reminders. The user should be able to enter a title for the reminder, more detailed description of the reminder as well as the due date . The user has to be able to save the reminder."
+An Extended session of Polymer Start Kit. It have a list of reminders which user has entered as well as a way for users to add new reminders. The user able to enter a title for the reminder, more detailed description of the reminder as well as the due date . The user able to save the reminder."
 
 Solutions
 -------------
