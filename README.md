@@ -5,7 +5,55 @@ Demo : https://polymer-reminder.firebaseapp.com/reminders
 
 An Extended session of Polymer Start Kit. It have a list of reminders which user has entered as well as a way for users to add new reminders. The user able to enter a title for the reminder, more detailed description of the reminder as well as the due date . The user able to save the reminder."
 
-Solutions
+
+----------
+
+#Getting started
+
+Run the project in the local serve  
+
+With Node.js installed
+
+1) Install gulp and bower globally.
+
+```npm install -g gulp bower```
+
+2) Install the projects local npm and bower dependencies at root directory of this project download
+
+```npm install && bower install```
+
+3) start serve/watch
+
+```gulp serve```
+
+
+#Tests:
+
+Polymer Starter Kit included Web Component Tester for unit testing, simply use ```wct``` tool will run tests in all the browsers that have installed.
+
+Install globally
+
+```npm install -g web-component-tester```
+
+run it with
+```
+wct
+```
+
+Alternatively we can run the test through Polymer CLI also powered by Web Component Tester
+```
+ polymer test
+```
+
+Both of them will run any tests under ```app/test/``` .
+
+##### Note: WCT will run your tests against whatever browsers you have locally installed, for Safari you must manually install the SafariDriver browser extension. You can download and check it out at:*
+
+https://github.com/SeleniumHQ/selenium/wiki/SafariDriver#getting-started
+
+
+
+Developing Solution logs
 -------------
 > **Task Analyse:**
 
@@ -154,49 +202,6 @@ Polymer({
 
 ```
 
-----------
 
-#Getting started
-
-Run the project in the local serve  
-
-With Node.js installed
-
-1) Install gulp and bower globally.
-
-```npm install -g gulp bower```
-
-2) Install the projects local npm and bower dependencies at root directory of this project download
-
-```npm install && bower install```
-
-3) start serve/watch
-
-```gulp serve```
-
-
-#Tests:
-
-Polymer Starter Kit included Web Component Tester for unit testing, simply use ```wct``` tool will run tests in all the browsers that have installed.
-
-Install globally
-
-```npm install -g web-component-tester```
-
-run it with
-```
-wct
-```
-
-Alternatively we can run the test through Polymer CLI also powered by Web Component Tester
-```
- polymer test
-```
-
-Both of them will run any tests under ```app/test/``` .
-
-#####*Note: WCT will run your tests against whatever browsers you have locally installed, for Safari you must manually install the SafariDriver browser extension. You can download and check it out at:*
-
-https://github.com/SeleniumHQ/selenium/wiki/SafariDriver#getting-started
 
 http://elementalselenium.com/tips/69-safari
