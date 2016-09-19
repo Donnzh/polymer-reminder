@@ -28,7 +28,7 @@
         myEl = fixture('basic');
       });
 
-      test('Default Value of reminder{} should be an empty object and reminders[] shoud be an empty array', function() {
+      test('Default Value of `reminder{}` should be an empty object and `reminders[]`` shoud be an empty array', function() {
 
           expect(myEl.reminder).to.be.an('object');
           expect(myEl.reminder).to.eql({});
@@ -37,7 +37,7 @@
 
         });
 
-        test('Users inputs should binded correctly with declared properties and passed to the reminder{}',function(){
+        test('Users inputs should binded correctly with declared properties, and then passed to the reminder{}',function(){
 
           var title = myEl.$$('#reminder_title');
           var details = myEl.$$('#reminder_details');
